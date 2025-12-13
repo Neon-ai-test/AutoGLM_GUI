@@ -46,6 +46,9 @@ class AutoGLMDesktopApp:
         # 创建界面
         self.create_widgets()
         
+        # 设置窗口关闭事件处理
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+        
         # 启动时检查ADB状态
         self.check_adb_status()
         
@@ -612,6 +615,43 @@ Agent可以执行以下操作:
         """任务完成后的清理工作"""
         self.execute_btn.config(state=tk.NORMAL)
         self.progress.stop()
+    
+    def stop_adb_service(self):
+        """停止ADB服务"""
+        try:
+            adb_path = self.adb_path_var.get() if self.adb_path_var.get() else "adb"
+            result = subprocess.run([adb_path, "kill-server"], 
+                                  capture_output=True, text=True, timeout=10)
+            return result.returncode == 0
+        except Exception:
+            return False
+    
+    def on_closing(self):
+        """窗口关闭事件处理"""
+        # 如果有任务正在执行，询问用户是否确定要关闭
+        if self.is_running:
+            if messagebox.askokcancel("确认", "任务正在执行中，确定要关闭应用程序吗？"):
+                # 尝试停止当前进程
+                if self.current_process:
+                    try:
+                        self.current_process.terminate()
+                        self.current_process.wait(timeout=5)
+                    except Exception:
+                        try:
+                            self.current_process.kill()
+                        except Exception:
+                            pass
+            else:
+                return
+        
+        # 停止ADB服务
+        try:
+            self.stop_adb_service()
+        except Exception:
+            pass  # 忽略停止ADB服务时的错误
+        
+        # 关闭窗口
+        self.root.destroy()
 
 
 def main():
