@@ -1,6 +1,6 @@
 # AutoGLM Desktop Application
 
-[官方项目文档](README_ORIGINAL.md) | [English Documentation](README_en.md)
+[官方项目文档](README.md) | [English Documentation](README_en.md)
 
 <div align="center">
 <img src="resources/logo.svg" width="20%"/>
@@ -21,7 +21,7 @@ Phone Agent 是一个基于 AutoGLM 构建的手机端智能助理框架，它�
 ## 特性
 
 - **简单易用的GUI界面**：提供直观的图形界面，无需记忆复杂的命令行参数
-- **API配置管理**：通过界面轻松配置智谱bigmodel的API设置
+- **API配置管理**：通过界面轻松配置API设置，支持多种模型服务提供商
 - **设备状态监控**：实时显示ADB服务状态和设备连接情况
 - **任务执行**：支持自然语言任务输入，实时显示执行输出
 - **内置教程**：提供详细的安装和配置指南，包括ADB和ADB Keyboard设置
