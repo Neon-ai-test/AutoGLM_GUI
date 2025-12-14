@@ -1,6 +1,6 @@
 # AutoGLM Desktop Application
 
-[官方项目文档](README_ORIGINAL.md) | [English Documentation](README_en.md)
+[English Documentation](README_en.md)
 
 <div align="center">
 <img src="resources/logo.svg" width="20%"/>
