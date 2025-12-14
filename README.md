@@ -2,7 +2,7 @@
 
 [English Documentation](README_en.md)
 
-<div align="center">
+<!-- <div align="center">
 <img src="resources/logo.svg" width="20%"/>
 </div>
 <p align="center">
@@ -10,7 +10,7 @@
 </p>
 <p align="center">
     🎤 进一步在我们的产品 <a href="https://autoglm.zhipuai.cn/autotyper/" target="_blank">智谱 AI 输入法</a> 体验"用嘴发指令"
-</p>
+</p> -->
 
 ## 项目介绍
 

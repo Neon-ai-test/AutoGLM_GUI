@@ -2,7 +2,7 @@
 
 [中文文档](README.md)
 
-<div align="center">
+<!-- <div align="center">
 <img src="resources/logo.svg" width="20%"/>
 </div>
 <p align="center">
@@ -10,7 +10,7 @@
 </p>
 <p align="center">
     🎤 Experience "voice commands" with our product <a href="https://autoglm.zhipuai.cn/autotyper/" target="_blank">Zhipu AI Input Method</a>
-</p>
+</p> -->
 
 ## Project Introduction
 
